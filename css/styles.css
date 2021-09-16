@@ -141,3 +141,16 @@ textarea {
 .size {
   height: 60vh;
 }
+
+.size2 {
+  height: 45vh;
+}
+
+.titulo{
+  font-family: 'Paytone One', sans-serif;
+  font-size: 100px;
+}
+
+.fuente{
+  font-family: 'Paytone One', sans-serif;
+}

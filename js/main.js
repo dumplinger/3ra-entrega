@@ -16,8 +16,7 @@ function reportStatus() {
 function recetasJSON(jsonData) {
     var recetas = [];
     recetas = JSON.parse(jsonData)
-    console.log(recetas)
-    console.log(recetas[2].tiempo)
+
 
     let selectComida = document.querySelector('#selectComida');
     selectComida.addEventListener('change', (evt) => {
@@ -52,7 +51,7 @@ const renderIndex = (tipoDeComidaSelect) => {
                   Ingredientes: ${receta.ingredientes} <br>
                   Se prepara en ${receta.tiempo} minutos.
                   <br><br>
-                  <a href="tiempo.html"><button class="button is-black is-medium is-link">Quiero!</button> </a>
+                  <a href="${receta.link}"><button class="button is-black is-medium is-link">Quiero!</button> </a>
                 </p>
               </div>
               </div>
@@ -61,7 +60,71 @@ const renderIndex = (tipoDeComidaSelect) => {
     })
 }
 
+let selectTiempo = document.querySelector('#selectTiempo');
+    selectTiempo.addEventListener('change', (evt) => {
+        console.log(evt.target.value)
+        
+        switch (evt.target.value) {
+            case "5":
+                renderIndex2("5");
+                break;
+            case "30":
+                renderIndex2("30")
+                break;
+        }
+    }
+    )
+
+const renderIndex2 = (TiempoSelect) => {
+    document.querySelector('#show-data').innerText = ''
+    let contenedor = document.querySelector("#show-data")
+
+    recetas.map(receta => {
+        if (receta.tiempo == TiempoSelect) {
+            contenedor.innerHTML += `
+            <div class="column is-one-third" >
+            <div class="card size">
+              <div class="card-content">
+                <div class="has-text-centered">
+                  <img src="${receta.img}" class="imgCards"/>
+                </div>
+                <h3 class="title is-3 has-text-centered" id="card-product-description">${receta.nombre}</h3>
+                <p class="has-text-centered">
+                  Ingredientes: ${receta.ingredientes} <br>
+                  Se prepara en ${receta.tiempo} minutos.
+                  <br><br>
+                  <a href="${receta.link}"><button class="button is-black is-medium is-link">Quiero!</button> </a>
+                </p>
+              </div>
+              </div>
+            `
+        }
+    })
 }
+
+
+
+}
+
+
+/*
+var myArray = [
+  "Apples",
+  "Bananas",
+  "Pears"
+];
+
+var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+
+document.body.innerHTML = randomItem;
+*/
+
+
+
+
+
+/*
+
 const URLGET = "https://api.spoonacular.com/food/ingredients/autocomplete?number=5&apiKey=e138c39956c34ea593e7026320f57fcf&query="
 
 
@@ -158,38 +221,4 @@ $("#tags").keyup(function (e) {
       }
             
       
-
-/*
-const URLGET = "https://api.spoonacular.com/recipes/findByIngredients?&number=7&apiKey=e138c39956c34ea593e7026320f57fcf&ingredients="
-$("#btn1").click(() => { 
-    $.get(URLGET+(document.getElementById('search').value), function (respuesta, estado) {
-          if(estado === "success"){
-            let misDatos = respuesta;
-            for (const dato of misDatos) {
-              $("body").prepend(`<div>
-                                   <h3>${dato.title}</h3>
-                                   <img src"${dato.image}>
-                                  </div>`);
-            }  
-          }
-    });
-});
-
-
-$.get(URLGET), function (respuesta, estado) {
-    if(estado === "success"){
-        $( function() {
-            var availableTags = [
-              respuesta
-            ];
-            console.log(respuesta)
-            $( "#tags" ).autocomplete({
-              source: availableTags
-            });
-          } );
-}}
-
-
 */
-
-    

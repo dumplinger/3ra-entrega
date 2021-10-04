@@ -107,17 +107,39 @@ const renderIndex2 = (TiempoSelect) => {
 }
 
 
-/*
-var myArray = [
-  "Apples",
-  "Bananas",
-  "Pears"
+let link = document.querySelector("#linkrandom")
+
+const htmls = [
+  "receta1.html",
+  "receta2.html",
+  "receta3.html",
+  "receta4.html",
+  "receta5.html",
+  "receta6.html",
+  "receta7.html",
+  "receta8.html",
+  "receta9.html",
+  "receta10.html",
+  "receta11.html",
+  "receta12.html",
+  "receta13.html",
+  "receta14.html",
+  "receta15.html",
+  "receta16.html",
+  "receta17.html",
+  "receta18.html",
+  "receta19.html",
+  "receta20.html",
 ];
 
-var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+const randomhtml = htmls[Math.floor(Math.random()*htmls.length)];
 
-document.body.innerHTML = randomItem;
-*/
+link.setAttribute ("href", `recetas/${randomhtml}`);
+
+
+
+
+
 
 
 

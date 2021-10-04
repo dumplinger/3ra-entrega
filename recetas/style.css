@@ -146,9 +146,9 @@ h2 {
 
 .content {
     grid-area: content;
-    overflow-y: auto;
+    overflow-y: visible;
     overflow-x: hidden;
-    height: 30rem;
+    height: 40rem;
 }
 
 .ingredients {
@@ -204,12 +204,8 @@ h2 {
     padding: .5rem 0 .5rem 0;
 }
 
-@media (max-width: 800px) {
-    body {
-        position: fixed;
-        font-size: 2vw;
-    }
-  
+@media only screen and (min-width: 501px) and (max-width: 720px) {
+
     .width-container {
         width: 100%;
     }
@@ -247,13 +243,12 @@ h2 {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 5vw;
         align-items: stretch;
-        overflow-y: auto;
-        overflow-x: hidden;
+        overflow-y: scroll;
     }
   
     .content {
-      height: calc(50% - 35vw);
-    }
+        height:fit-content;
+      }
 
     .recipe-img > figure > img {
         width: 100vw;
@@ -265,6 +260,26 @@ h2 {
     .variation, .introduction-1, .introduction-2 > p {
         font-size: .75rem;
     }
+}
+
+@media only screen and (max-width: 500px) {
+    .main-content {
+        display: grid;
+        grid-template-areas:
+            "img img" 
+            "intro-1 intro-2"
+            "content content";
+        grid-template-rows: auto auto auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5vw;
+        align-items: stretch;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .content {
+        height:fit-content;
+      }
 }
 
 @media print { 

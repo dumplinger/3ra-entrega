@@ -33,6 +33,21 @@ function recetasJSON(jsonData) {
     }
     )
 
+    let selectTiempo = document.querySelector('#selectTiempo');
+    selectTiempo.addEventListener('change', (evt) => {
+        console.log(evt.target.value)
+        
+        switch (evt.target.value) {
+            case "5":
+                renderIndex2("5");
+                break;
+            case "30":
+                renderIndex2("30")
+                break;
+        }
+    }
+    )
+
 const renderIndex = (tipoDeComidaSelect) => {
     document.querySelector('#show-data').innerText = ''
     let contenedor = document.querySelector("#show-data")
@@ -57,23 +72,16 @@ const renderIndex = (tipoDeComidaSelect) => {
               </div>
             `
         }
+
+      
     })
+
+
+    
+
 }
 
-let selectTiempo = document.querySelector('#selectTiempo');
-    selectTiempo.addEventListener('change', (evt) => {
-        console.log(evt.target.value)
-        
-        switch (evt.target.value) {
-            case "5":
-                renderIndex2("5");
-                break;
-            case "30":
-                renderIndex2("30")
-                break;
-        }
-    }
-    )
+
 
 const renderIndex2 = (TiempoSelect) => {
     document.querySelector('#show-data').innerText = ''

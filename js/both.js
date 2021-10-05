@@ -26,7 +26,6 @@ headroom.init();
 
 function randomFunction () {
   let link = document.querySelector("#linkrandom")
-  let link2 = document.querySelector("#random2")
   
   const htmls = [
     "receta1.html",
@@ -54,5 +53,4 @@ function randomFunction () {
   const randomhtml = htmls[Math.floor(Math.random()*htmls.length)];
   
   link.setAttribute ("href", `recetas/${randomhtml}`);
-  link2.setAttribute ("href", `recetas/${randomhtml}`);
   }

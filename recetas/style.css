@@ -258,6 +258,10 @@ height: fit-content;
     .variation, .introduction-1, .introduction-2 > p {
         font-size: .75rem;
     }
+
+    .card-recetas{
+        margin: 0% 10% 0% 10%;
+        }
 }
 
 @media only screen and (max-width: 500px) {
@@ -278,6 +282,11 @@ height: fit-content;
     .content {
         height:fit-content;
       }
+
+      .big-header-text {
+        text-align: center;
+        font-size: 12vw;
+    }
 }
 
 @media print { 

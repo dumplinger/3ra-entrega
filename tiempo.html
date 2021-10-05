@@ -17,41 +17,29 @@
 
 
   <body>
-    <div class="container" id="navbar-container">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <h1 class="title fuente">Lazy Veggie</h1>
+    <header class="headroom">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="index.html" style="font-weight:bold;">
+              <h1 class="title fuente">Lazy Veggie</h1>
           </a>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start"></div>
-
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <a class="navbar-item fuentesub" href="index.html"> Home</a>
-              <a class="navbar-item fuentesub" href="tiempo.html"> Recetas a tiempo</a>
-              <a class="navbar-item fuentesub" href="repositorio1.html"> Buscar</a>
-              <a class="navbar-item fuentesub" href="busqueda.html"> Ingredientes</a>
-
+            <span class="navbar-burger burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+            </span>
+          </div>
+          <div id="navMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <a href="tiempo.html" class="navbar-item fuentesub">Recetas a tiempo</a>
+              <a href="busqueda.html" class="navbar-item fuentesub">Busqueda</a>
+              <a class="navbar-item fuentesub" id="random2" onclick="randomFunction()">Random</a>
             </div>
           </div>
         </div>
       </nav>
-    </div>
+    </header>
 
 
     <section class="section">
@@ -120,78 +108,18 @@
 
       
 
-    <section class="section">
-      <div class="container">
-        <div class="footer-main">
-          <div class="columns">
-            <div class="column">
-              <h4 class="title is-4">Fruits</h4>
-              <p class="">
-                randomised words which don't look even slightly believable. If you are going to use
-                a passage of Lorem Ipsum,
-              </p>
-            </div>
-            <div class="column">
-              <h4 class="title is-4">Services</h4>
-              <p class="">
-                randomised words which don't look even slightly believable. If you are going to use
-                a passage of Lorem Ipsum,
-              </p>
-            </div>
-            <div class="column">
-              <h4 class="title is-4">List</h4>
-              <p class="">
-                randomised words which don't look even slightly believable. If you are going to use
-                a passage of Lorem Ipsum,
-              </p>
-            </div>
 
-            <div class="column">
-              <h4 class="title is-4">Follow Us</h4>
-
-              <div class="buttons">
-                <a class="button is-medium is-facebook is-inverted is-black-social">
-                  <span class="icon">
-                    <i class="fab fa-facebook fa-lg"></i>
-                  </span>
-                </a>
-                <a class="button is-medium is-instagram is-inverted is-black-social">
-                  <span class="icon">
-                    <i class="fab fa-instagram fa-lg"></i>
-                  </span>
-                </a>
-                <a class="button is-medium is-twitter is-inverted is-black-social">
-                  <span class="icon">
-                    <i class="fab fa-twitter fa-lg"></i>
-                  </span>
-                </a>
-                <a class="button is-medium is-youtube is-inverted is-black-social">
-                  <span class="icon">
-                    <i class="fab fa-youtube fa-lg"></i>
-                  </span>
-                </a>
-              </div>
-              <h4 class="title is-4">Subscribe Now</h4>
-              <div class="field">
-                <input class="input" type="text" placeholder="Email" />
-              </div>
-              <div class="buttons">
-                <button class="button is-left is-medium is-orange">Subscribe</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <footer class="footer-secondary">
         <div class="content has-text-centered">
-          <p>
-            Copyright © 2021 Tropico Template ♥ by
+          <p class="fuentesub">
+            Proyecto Final Javascript ○ Milena Giménez <br> Copyright © 2021 Tropico Template by
             <a href="https://github.com/restylianos">restylianos</a>
           </p>
         </div>
       </footer>
     </section>
     <script src="js/filtro.js"></script>
+    <script src="js/both.js"></script>
   </body>
 </html>

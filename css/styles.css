@@ -202,9 +202,23 @@ footer {
 
 .fuentesub{
   font-family:'Raleway', sans-serif;
-  font-size: larger;
+  font-size: 20px;
 }
 
 .todasRecetas {
   padding-left: 10%;
 }
+
+select option:hover,
+    select option:focus,
+    select option:active {
+        background: linear-gradient(#000000, #000000);
+        background-color: #fc5d35 !important; /* for IE */
+        color: #ffed00 !important;
+    }
+
+    select option:checked {
+        background: linear-gradient(#d6d6d6, #d6d6d6);
+        background-color: #fc5d35 !important; /* for IE */
+        color: #000000 !important;
+    }

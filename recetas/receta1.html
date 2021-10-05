@@ -8,56 +8,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"/>
-     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="//css/styles.css">
 
   </head>
 
 
   <body>
     <header>
-    <div class="container" id="navbar-container">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <h1 class="title fuente">Lazy Veggie</h1>
-          </a>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+    <header class="headroom">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html" style="font-weight:bold;">
+          <h1 class="title fuente">Lazy Veggie</h1>
+      </a>
+        <span class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </span>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="tiempo.html" class="navbar-item fuentesub">Recetas a tiempo</a>
+          <a href="busqueda.html" class="navbar-item fuentesub">Busqueda</a>
+          <a class="navbar-item fuentesub" id="random2" onclick="randomFunction()">Random</a>
         </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start"></div>
-
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <a class="navbar-item" href="index.html"> Home</a>
-              <a class="navbar-item" href="tiempo.html"> Recetas a tiempo</a>
-              <a class="navbar-item" href="repositorio1.html"> Buscar</a>
-
-              <a class="navbar-item" href="busqueda.html"> Ingredientes</a>
-
-            </div>
-          </div>
-        </div>
-      </nav>
+      </div>
     </div>
+  </nav>
+</header>
 <!-- partial:index.partial.html -->
 <div class="width-container">
 
@@ -127,3 +111,4 @@
   
 </body>
 </html>
+

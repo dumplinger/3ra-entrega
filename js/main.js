@@ -41,6 +41,7 @@ recetastodas.forEach(receta=> recetasDiv.innerHTML += `<div class="column is-one
   </div>`);
 }
 
+//BUSCAR RECETAS
 function search_recetas() {
   let input = document.getElementById('searchbar').value
   input=input.toLowerCase();

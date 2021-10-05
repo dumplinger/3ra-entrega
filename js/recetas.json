@@ -11,5 +11,16 @@
     { "id": 9,  "nombre": "Panqueques de Banana", "ingredientes": ["banana", "avena"], "ingredientesOpcionales": ["miel", "mermelada"], "vegano": true, "tiempo": 5, "tipoDeComida": "desayunoMerienda", "img": "img/9.jpg", "link": "recetas/receta9.html"},
     { "id": 10,  "nombre": "Panqueques Domingueros", "ingredientes": ["banana", "avena", "huevo", "leche", "harina", "azucar"], "ingredientesOpcionales": ["miel", "mermelada", "canela", "maple syrup"], "vegano": false, "tiempo": 30, "tipoDeComida": "desayunoMerienda",  "img":"img/10.jpg", "link": "recetas/receta10.html"},
     { "id": 11,  "nombre": "Overnight Oats", "ingredientes": ["avena", "leche", "miel", "vainilla"], "ingredientesOpcionales": ["miel", "mermelada", "canela", "maple syrup"], "vegano": true, "tiempo": 30, "tipoDeComida": "desayunoMerienda", "img": "img/11.jpg", "link": "recetas/receta11.html"},
-    { "id": 12,  "nombre": "Barritas de avena", "ingredientes": ["avena", "miel", "manteca de mani", "canela"], "ingredientesOpcionales": ["chocolate"], "vegano": true, "tiempo": 30, "tipoDeComida": "desayunoMerienda", "img": "img/12.jpg", "link": "recetas/receta12.html"}
-]
+    { "id": 12,  "nombre": "Barritas de avena", "ingredientes": ["avena", "miel", "manteca de mani", "canela"], "ingredientesOpcionales": ["chocolate"], "vegano": true, "tiempo": 30, "tipoDeComida": "desayunoMerienda", "img": "img/12.jpg", "link": "recetas/receta12.html"},
+    { "id": 13,  "nombre": "Sándwich de Morrón", "ingredientes": ["morron", "queso crema", "muzzarella", "albahaca", "rucula", "huevo"], "ingredientesOpcionales": [""], "vegano": false, "tiempo": 5, "tipoDeComida": "almuerzoCena", "img": "img/13.jpg", "link": "recetas/receta13.html"},
+    { "id": 14,  "nombre": "Mac n Cheese", "ingredientes": ["calabaza", "leche", "queso", "nuez moscada"], "ingredientesOpcionales": [""], "vegano": false, "tiempo": 30, "tipoDeComida": "almuerzoCena", "img": "img/14.jpg", "link": "recetas/receta14.html"},
+    { "id": 15,  "nombre": "Garbanzos al Curry", "ingredientes": ["ajo", "cebolla", "garbanzos", "leche"], "ingredientesOpcionales": [""], "vegano": false, "tiempo": 30, "tipoDeComida": "almuerzoCena", "img": "img/15.jpg", "link": "recetas/receta15.html"},
+    { "id": 16,  "nombre": "Hummus de Lentejas", "ingredientes": ["ajo", "lentejas", "limón", "cilantro"], "ingredientesOpcionales": [""], "vegano": true, "tiempo": 5, "tipoDeComida": "almuerzoCena", "img": "img/16.jpg", "link": "recetas/receta16.html"},
+    { "id": 17,  "nombre": "Tostada Francesa", "ingredientes": ["pan", "huevo", "leche", "frutilla"], "ingredientesOpcionales": [""], "vegano": false, "tiempo": 5, "tipoDeComida": "desayunoMerienda", "img": "img/17.jpg", "link": "recetas/receta17.html"},
+    { "id": 18,  "nombre": "Tortelines de Queso y Huevo", "ingredientes": ["queso", "huevo", "salsa de tomate", "albahaca"], "ingredientesOpcionales": [""], "vegano": false, "tiempo": 30, "tipoDeComida": "desayunoMerienda", "img": "img/18.jpg", "link": "recetas/receta18.html"},
+    { "id": 17,  "nombre": "Avocado Toast", "ingredientes": ["pan", "huevo", "palta", "oregano"], "ingredientesOpcionales": [""], "vegano": false, "tiempo": 5, "tipoDeComida": "desayunoMerienda", "img": "img/19.jpg", "link": "recetas/receta19.html"},
+    { "id": 17,  "nombre": "Smoothie Matcha", "ingredientes": ["banana", "matcha", "leche", "miel"], "ingredientesOpcionales": [""], "vegano": false, "tiempo": 5, "tipoDeComida": "desayunoMerienda", "img": "img/20.jpg", "link": "recetas/receta20.html"}
+
+
+
+    ]

@@ -5,7 +5,7 @@ const oXHR = new XMLHttpRequest();
 
 // Initiate request.
 oXHR.onreadystatechange = reportStatus;
-oXHR.open("GET", "recetas.json", true);  // get json file.
+oXHR.open("GET", "js/recetas.json", true);  // get json file.
 oXHR.send();
 
 function reportStatus() {

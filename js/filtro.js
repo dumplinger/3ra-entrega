@@ -58,14 +58,13 @@ const renderIndex = (tipoDeComidaSelect) => {
             <div class="card size">
               <div class="card-content">
                 <div class="has-text-centered">
-                  <img src="${receta.img}" class="imgCards"/>
+                <a href="${receta.link}"><img src="${receta.img}" class="imgCards"/></a>
                 </div>
                 <h3 class="title is-3 has-text-centered" id="card-product-description">${receta.nombre}</h3>
                 <p class="has-text-centered">
                   Ingredientes: ${receta.ingredientes} <br>
                   Se prepara en ${receta.tiempo} minutos.
                   <br><br>
-                  <a href="${receta.link}"><button class="button is-black is-medium is-link">Quiero!</button> </a>
                 </p>
               </div>
               </div>

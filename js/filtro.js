@@ -1,4 +1,4 @@
-// Create XMLHttpRequest object.
+
 const oXHR = new XMLHttpRequest();
 
 // Initiate request.

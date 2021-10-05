@@ -287,6 +287,14 @@ height: fit-content;
         text-align: center;
         font-size: 12vw;
     }
+    .recipe-details{
+        display: none;
+    
+    }
+
+    .card-recetas{
+        margin: 0%;
+        }
 }
 
 @media print { 

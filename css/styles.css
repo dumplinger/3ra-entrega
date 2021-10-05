@@ -1,19 +1,102 @@
-.navbar-item {
-  padding-right: 40px !important;
-  font-size: large !important;
+
+
+
+.navbar-link.is-active, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:hover, .navbar-end a.navbar-item.is-active {
+    background-color: tomato;
+    color: #fff;
 }
 
-.navbar-item:hover {
+/* Custom animation styles */
 
-  color: black !important;
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+  }
 }
 
-.nav{
-  background-color: white ;
+@-moz-keyframes slideDown {
+  0% {
+    -moz-transform: translateY(-100%);
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+  }
 }
 
-.nav:hover{
-  background-color: #fc5d35;
+@-o-keyframes slideDown {
+  0% {
+    -o-transform: translateY(-100%);
+  }
+
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated.slideDown {
+  -webkit-animation-name: slideDown;
+  -moz-animation-name: slideDown;
+  -o-animation-name: slideDown;
+  animation-name: slideDown;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-100%);
+  }
+}
+@-moz-keyframes slideUp {
+  0% {
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    -moz-transform: translateY(-100%);
+  }
+}
+@-o-keyframes slideUp {
+  0% {
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    -o-transform: translateY(-100%);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animated.slideUp {
+  -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  animation-name: slideUp;
 }
 
 #carousel-section {
@@ -31,20 +114,6 @@
 }
 
 
-#fresh-fruits-section {
-  margin-top: 50px;
-}
-
-#tasty-fruits-section {
-  background-image: url(https://technext.github.io/tropika/images/tasty-image.png);
-  background-repeat: no-repeat;
-  height: 400px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 50px;
-  margin-bottom: 100px;
-}
 
 .card:hover {
   transform: scale(1.02);
@@ -62,47 +131,14 @@
   height: 256px !important;
 }
 
-#contact-section {
-  background-image: url(https://technext.github.io/tropika//images/orange-dish.png);
-  background-repeat: no-repeat;
-  height: 500px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  background-position: right center;
-  overflow: hidden;
-}
 
-input.is-custom-field {
-  border-bottom: 0.8px solid #252525 !important;
-  outline: none;
-  border: none;
-  box-shadow: none !important;
-  /* width: 90% !important; */
-  border-radius: unset;
-}
 
-textarea {
-  border-bottom: 0.8px solid #252525 !important;
-  outline: none !important;
-  border: none;
-  box-shadow: none !important;
-  border-radius: unset;
-  border-color: none !important;
-  outline-color: none !important;
-}
 
-#map {
-  width: 100% !important;
-  height: 400px;
-  margin-bottom: 50px;
-}
 
-.footer-main {
-  background-color: white !important;
-  padding: 0 !important;
+
+footer {
+  background-color: #fc5d35 !important;
+  padding: 7vh !important;
 }
 
 .footer-secondary {
@@ -166,4 +202,9 @@ textarea {
 
 .fuentesub{
   font-family:'Raleway', sans-serif;
+  font-size: larger;
+}
+
+.todasRecetas {
+  padding-left: 10%;
 }

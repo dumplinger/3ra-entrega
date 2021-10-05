@@ -16,68 +16,6 @@ function reportStatus() {
     }
 }
 
-
-function recetasJSON(jsonData) {
-    var recetas = [];
-    recetas = JSON.parse(jsonData)
-    
-let selectComida = document.querySelector('#selectComida');
-  selectComida.addEventListener('change', (evt) => {
-        
-        switch (evt.target.value) {
-            case "almuerzoCena":
-                renderIndex("almuerzoCena");
-                break;
-            case "desayunoMerienda":
-                renderIndex("desayunoMerienda")
-                break;
-        }
-    }
-    )
-
-const renderIndex = (tipoDeComidaSelect) => {
-
-  let selectTiempo = document.querySelector('#selectTiempo');
-  selectTiempo.addEventListener('change', (evt) => {
-      
-      switch (evt.target.value) {
-          case "5":
-              renderIndex2("5");
-              break;
-          case "30":
-              renderIndex2("30")
-              break;
-      }
-  }
-  )
-  const renderIndex2 = (TiempoSelect) => {
-    document.querySelector('#show-data').innerText = ''
-    let contenedor = document.querySelector("#show-data")
-
-    recetas.map(receta => {
-        if (receta.tiempo == TiempoSelect && receta.tipoDeComida == tipoDeComidaSelect) {
-            contenedor.innerHTML += `
-            <div class="column is-one-third" >
-            <div class="card size">
-              <div class="card-content">
-                <div class="has-text-centered">
-                  <img src="${receta.img}" class="imgCards"/>
-                </div>
-                <h3 class="title is-3 has-text-centered" id="card-product-description">${receta.nombre}</h3>
-                <p class="has-text-centered">
-                  Ingredientes: ${receta.ingredientes} <br>
-                  Se prepara en ${receta.tiempo} minutos.
-                  <br><br>
-                  <a href="${receta.link}"><button class="button is-black is-medium is-link">Quiero!</button> </a>
-                </p>
-              </div>
-              </div>
-            `
-        }
-    })
-}}}
-
-
 function recetasJSON(jsonData) {
   var recetastodas = [];
   recetastodas = JSON.parse(jsonData)
@@ -92,46 +30,32 @@ recetastodas.forEach(receta=> recetasDiv.innerHTML += `<div class="column is-one
     <div class="has-text-centered">
       <img src="${receta.img}" class="imgCards"/>
     </div>
-    <h3 class="title is-3 has-text-centered" id="card-product-description">${receta.nombre}</h3>
-    <p class="has-text-centered">
-      Ingredientes: ${receta.ingredientes} <br>
+    <h3 class="title is-3 has-text-centered nombreReceta" id="card-product-description">${receta.nombre}</h3>
+    <div class="has-text-centered">
+      <p class="ingredientes">Ingredientes: ${receta.ingredientes} </p>
       Se prepara en ${receta.tiempo} minutos.
       <br><br>
       <a href="${receta.link}"><button class="button is-black is-medium is-link">Quiero!</button> </a>
-    </p>
+    </div>
   </div>
   </div>`);
 }
 
+function search_recetas() {
+  let input = document.getElementById('searchbar').value
+  input=input.toLowerCase();
+  let x = document.getElementsByClassName('nombreReceta');
+  let c = document.getElementsByClassName('card');
+  let t = document.getElementsByClassName('ingredientes');
 
-function randomFunction () {
-let link = document.querySelector("#linkrandom")
+for (i = 0; i < x.length; i++) { 
+      if (!x[i].innerHTML.toLowerCase().includes(input) & !t[i].innerHTML.toLowerCase().includes(input)) {
+          c[i].style.display="none";
+      }
+      else {
+          c[i].style.display="inherit";                 
+      }
+  }
 
-const htmls = [
-  "receta1.html",
-  "receta2.html",
-  "receta3.html",
-  "receta4.html",
-  "receta5.html",
-  "receta6.html",
-  "receta7.html",
-  "receta8.html",
-  "receta9.html",
-  "receta10.html",
-  "receta11.html",
-  "receta12.html",
-  "receta13.html",
-  "receta14.html",
-  "receta15.html",
-  "receta16.html",
-  "receta17.html",
-  "receta18.html",
-  "receta19.html",
-  "receta20.html",
-];
-
-const randomhtml = htmls[Math.floor(Math.random()*htmls.length)];
-
-link.setAttribute ("href", `recetas/${randomhtml}`);
+  
 }
-

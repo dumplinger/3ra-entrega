@@ -59,12 +59,15 @@
     <section class="section">
         <div class="container paddingInput">
           <h1 class="title">Ingresa un ingrediente:</h1>
-          <input id="tags" class="input is-primary is-large" type="text" placeholder="Primary input">
+          <input id="searchbar" onkeyup="search_recetas()" class="input is-primary is-large" type="text" name="search" placeholder="Buscar recetas...">
         </div>
     </section>
 
+
+    
+
 <section class="section">
-      <div class="container" id="recetasDiv">
+      <div class="container columns is-multiline stretch" id="recetasDiv">
       </div>
   </section>
 

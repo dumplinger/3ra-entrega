@@ -1,3 +1,5 @@
+
+
 // Create XMLHttpRequest object.
 const oXHR = new XMLHttpRequest();
 
@@ -9,15 +11,16 @@ oXHR.send();
 function reportStatus() {
     if (oXHR.readyState == 4) {		// Check if request is complete.
         recetasJSON(this.responseText);
-        //document.getElementById('showData').innerHTML = this.responseText;
+        //document.getElementById('recetasDiv').innerHTML = this.responseText;
+        
     }
 }
+
 
 function recetasJSON(jsonData) {
     var recetas = [];
     recetas = JSON.parse(jsonData)
-
-
+    
 let selectComida = document.querySelector('#selectComida');
   selectComida.addEventListener('change', (evt) => {
         
@@ -72,19 +75,36 @@ const renderIndex = (tipoDeComidaSelect) => {
             `
         }
     })
+}}}
+
+
+function recetasJSON(jsonData) {
+  var recetastodas = [];
+  recetastodas = JSON.parse(jsonData)
+
+  document.querySelector('#recetasDiv').innerText = ''
+  let recetasDiv = document.querySelector("#recetasDiv")
+
+
+recetastodas.forEach(receta=> recetasDiv.innerHTML += `<div class="column is-one-third" >
+<div class="card size">
+  <div class="card-content">
+    <div class="has-text-centered">
+      <img src="${receta.img}" class="imgCards"/>
+    </div>
+    <h3 class="title is-3 has-text-centered" id="card-product-description">${receta.nombre}</h3>
+    <p class="has-text-centered">
+      Ingredientes: ${receta.ingredientes} <br>
+      Se prepara en ${receta.tiempo} minutos.
+      <br><br>
+      <a href="${receta.link}"><button class="button is-black is-medium is-link">Quiero!</button> </a>
+    </p>
+  </div>
+  </div>`);
 }
-    
-}
-
-recetas.forEach(receta => {
-  console.log(receta);
-});
 
 
-}
-
-
-
+function randomFunction () {
 let link = document.querySelector("#linkrandom")
 
 const htmls = [
@@ -113,14 +133,5 @@ const htmls = [
 const randomhtml = htmls[Math.floor(Math.random()*htmls.length)];
 
 link.setAttribute ("href", `recetas/${randomhtml}`);
+}
 
-
-
-
-
-let recetasDiv = document.querySelector("#recetasDiv")
-recetasDiv.innerHTML += `queso`
-
-
-
-alert("hola")

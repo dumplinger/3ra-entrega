@@ -209,6 +209,10 @@ footer {
   padding-left: 10%;
 }
 
+.iconos{
+  height: 90px;
+}
+
 select option:hover,
     select option:focus,
     select option:active {

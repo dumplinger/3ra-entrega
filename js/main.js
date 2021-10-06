@@ -1,17 +1,16 @@
 
 
-// Create XMLHttpRequest object.
+// BUSCADOR DE RECETAS POR NOMBRE / INGREDIENTE
 const oXHR = new XMLHttpRequest();
 
 // Initiate request.
 oXHR.onreadystatechange = reportStatus;
-oXHR.open("GET", "js/recetas.json", true);  // get json file.
+oXHR.open("GET", "js/recetas.json", true);
 oXHR.send();
 
 function reportStatus() {
-    if (oXHR.readyState == 4) {		// Check if request is complete.
+    if (oXHR.readyState == 4) {		
         recetasJSON(this.responseText);
-        //document.getElementById('recetasDiv').innerHTML = this.responseText;
         
     }
 }
@@ -40,7 +39,6 @@ recetastodas.forEach(receta=> recetasDiv.innerHTML += `<div class="column is-one
   </div>`);
 }
 
-//BUSCAR RECETASS
 function search_recetas() {
   let input = document.getElementById('searchbar').value
   input=input.toLowerCase();

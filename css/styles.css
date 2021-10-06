@@ -1,9 +1,10 @@
+/*MENU BURGER*/
+
+
 .navbar-link.is-active, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:hover, .navbar-end a.navbar-item.is-active {
     background-color: tomato;
     color: #fff;
 }
-
-/* Custom animation styles */
 
 @-webkit-keyframes slideDown {
   0% {
@@ -96,12 +97,11 @@
   animation-name: slideUp;
 }
 
+/*CARDS*/
 
 #card-product-description {
   color: orange;
 }
-
-
 
 .card:hover {
   transform: scale(1.02);
@@ -114,10 +114,26 @@
   text-transform: uppercase;
 }
 
-.is-256x256 {
-  width: 256px !important;
-  height: 256px !important;
+.imgCards {
+  width:  30vh;
+  height: 30vh;
+  object-fit: cover;
 }
+
+.size {
+  height: 60vh;
+}
+
+.size2 {
+  height: 55vh;
+}
+
+.iconos{
+  height: 90px;
+}
+
+
+/*FOOTER*/
 
 footer {
   background-color: #fc5d35 !important;
@@ -128,6 +144,9 @@ footer {
   padding: 20px;
   margin-top: 20px;
 }
+
+
+/*BOTONES*/
 
 .button.is-black {
   background-color: black !important;
@@ -156,23 +175,13 @@ footer {
   color: #fc5d35 !important;
 }
 
-.imgCards {
-  width:  30vh;
-  height: 30vh;
-  object-fit: cover;
-}
+/*INPUT*/
 
 .paddingInput{
   padding: 0% 10% 0% 10%; 
 }
 
-.size {
-  height: 60vh;
-}
-
-.size2 {
-  height: 55vh;
-}
+/*FUENTES*/
 
 .titulo{
   font-family: 'Paytone One', sans-serif;
@@ -192,10 +201,7 @@ footer {
   padding-left: 10%;
 }
 
-.iconos{
-  height: 90px;
-}
-
+/*FORM*/
 select option:hover,
     select option:focus,
     select option:active {
@@ -210,6 +216,7 @@ select option:hover,
         color: #000000 !important;
     }
 
+    /*MEDIA QUERIES*/
     @media only screen and (min-width: 501px) and (max-width: 720px) {
       .titulo{
         font-family: 'Paytone One', sans-serif;

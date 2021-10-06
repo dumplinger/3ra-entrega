@@ -1,15 +1,13 @@
-
+//FILTRO DE RECETAS POR TIEMPO+COMIDA
 const oXHR = new XMLHttpRequest();
 
-// Initiate request.
 oXHR.onreadystatechange = reportStatus;
-oXHR.open("GET", "js/recetas.json", true);  // get json file.
+oXHR.open("GET", "js/recetas.json", true);  
 oXHR.send();
 
 function reportStatus() {
-    if (oXHR.readyState == 4) {		// Check if request is complete.
+    if (oXHR.readyState == 4) {		
         recetasJSON(this.responseText);
-        //document.getElementById('recetasDiv').innerHTML = this.responseText;
         
     }
 }
